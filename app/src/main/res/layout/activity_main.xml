@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/lacquer"
+            android:text="@string/welcome_to_kazkorean"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.084"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText" />
+
+        <TextView
+            android:id="@+id/textView43"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="@font/lacquer"
+            android:text="What products are you looking for?"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.253"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="123dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:id="@+id/my_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="-21dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="My Order"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:contentDescription="@string/cart_icon"
+                    android:src="@drawable/ic_baseline_shopping_cart_24" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:contentDescription="@string/left_bar"
+                    android:src="@drawable/menu" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/lay"
+            android:layout_width="0dp"
+            android:layout_height="408dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView43">
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:translationY="-10dp"
+                app:alignmentMode="alignMargins"
+                app:columnCount="2"
+                app:columnOrderPreserved="false"
+                app:rowCount="1">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/drinks_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/cardView_drink">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="20dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/perfume"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-20dp"
+                            android:layout_marginBottom="-20dp"
+                            android:contentDescription="@string/perfume"
+                            android:src="@drawable/main1" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/snacks_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/cardView_snack">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="20dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/cream"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-20dp"
+                            android:layout_marginBottom="-20dp"
+                            android:contentDescription="@string/cream_image"
+                            android:src="@drawable/main3" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/foods_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/cardView_food">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="20dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/lipsticks"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-20dp"
+                            android:layout_marginBottom="-20dp"
+                            android:contentDescription="@string/lipsticks_image"
+                            android:src="@drawable/main2" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/topUp_menu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardUseCompatPadding="true"
+                    app:layout_columnWeight="1"
+                    app:layout_rowWeight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/cardView_topUp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginStart="0dp"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/poppins_semibold"
+                            android:padding="20dp"
+                            android:paddingStart="15dp"
+                            android:text="@string/top_up"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginEnd="-20dp"
+                            android:layout_marginBottom="-20dp"
+                            android:contentDescription="@string/top_up_image"
+                            android:src="@drawable/topup" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+            </androidx.gridlayout.widget.GridLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/discountedRecycler"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@color/mediumGray" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Shampoo"
+            android:textColor="@color/colorBG"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lay" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/shampoo_item"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/search_bg"
+            android:drawableLeft="@drawable/ic_baseline_search_24"
+            android:drawablePadding="9dp"
+            android:fontFamily="@font/lacquer"
+            android:hint="Search grocery"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/shampoo_item"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Home"
+                android:textSize="50sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="0dp"
+                android:layout_marginEnd="0dp"
+                app:itemBackground="@color/red"
+                app:itemIconTint="@drawable/selector"
+                app:itemTextColor="@drawable/selector"
+                app:menu="@menu/menu_navigation" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

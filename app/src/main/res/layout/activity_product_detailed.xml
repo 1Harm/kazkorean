@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBG"
+    tools:context=".activities.ProductDetailsActivity">
+
+    <ImageView
+        android:id="@+id/cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="cartView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cart_black" />
+
+    <ImageView
+        android:id="@+id/back2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="?selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
+
+
+    <TextView
+        android:id="@+id/detailName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans"
+        android:text="Product Details"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/back2" />
+
+    <ImageView
+        android:id="@+id/big_image"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back2"
+        app:srcCompat="@drawable/b1" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="TextView"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_image" />
+
+    <TextView
+        android:id="@+id/prodPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/open_sans_bold"
+        android:text="TextView"
+        android:textColor="#4d4d4d"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/prodDesc"
+        app:layout_constraintTop_toBottomOf="@+id/prodDesc" />
+
+    <TextView
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/qty"
+        app:layout_constraintStart_toEndOf="@+id/qty"
+        app:layout_constraintTop_toTopOf="@+id/qty"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/qty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="@+id/prodPrice"
+        app:layout_constraintTop_toBottomOf="@+id/prodPrice" />
+
+    <TextView
+        android:id="@+id/prodDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="272dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="prodDesc"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.024"
+        app:layout_constraintStart_toStartOf="@+id/productName"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <EditText
+        android:id="@+id/personName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_bg"
+        android:ems="10"
+        android:hint="Enter Name"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/mobileNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_image" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/insertBtn"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="166dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Buy Now"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:theme="@style/Widget.AppCompat.Button"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addCart"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="167dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/open_sans_light"
+        android:text="Add to cart"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:theme="@style/Widget.AppCompat.Button"
+        app:cornerRadius="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"></com.google.android.material.button.MaterialButton>
+
+    <EditText
+        android:id="@+id/mobileNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:background="@drawable/ic_bg"
+        android:ems="10"
+        android:hint="Enter Mobile Number"
+        android:inputType="phone"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/productName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/big_image"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
